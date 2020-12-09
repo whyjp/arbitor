@@ -1,0 +1,106 @@
+#ifndef _F_IFACE_H_
+#define _F_IFACE_H_
+
+#define MUTEXNAME "SERVICE_MUTEXNAME"
+// 각각의 명령에서 참고되는 구조체
+#define MAXHIDDENFILEENTRIES 100
+#define MAXHIDDENFILENAMESIZE 1024
+
+#define ORIGINAL_FILENAME "original.exe"
+
+#define GUIDCNT 34
+#define GUIDCNTX2 68
+//////////////////////////////////////////////////////////////////////////
+//서비스 관련 정의 
+//////////////////////////////////////////////////////////////////////////
+
+#define EXENAME "Ab_svc_service.exe"
+#define SRVNAME "Arbiter"
+#define DISPNAME "Arbiter's service part"
+
+#define SERVICE_HIDDEN_FILES 128
+#define SERVICE_SHOW_FILES 129
+#define SERVICE_ADD_HIDDEN_FILE 130
+#define SERVICE_DEL_HIDDEN_FILE 131
+#define SERVICE_ALL_RESET_HIDDEN_FILES 132
+#define SERVICE_SET_DRIVE 133
+#define SERVICE_SET_EVENT 134
+#define SERVICE_ADD_GUID 135
+#define SERVICE_DEL_GUID 136
+#define SERVICE_RUN_HFILE 137
+#define SERVICE_DEL_HFILE 138
+#define SERVICE_ADD_LIST 139
+#define SERVICE_GET_AT_LIST 140
+#define SERVICE_DEL_HF_AT_UNINSTALL 141
+
+#define P_TOSERVICE "\\\\.\\pipe\\toService"
+#define P_FROMSERVICE "\\\\.\\pipe\\fromService"
+
+struct _hidden_file_att{
+	char Filename[MAXHIDDENFILENAMESIZE];
+	char Guid[GUIDCNT+1];
+	ULONG handleno;
+}typedef HFILE_ATT,*PHFILE_ATT;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Application Interface
+
+// 파일숨기기기능을 위해서 추가됨
+#define HIDDEN_CMD    0x900
+
+#define IOCTL_HIDDEN_FILES CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0001, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SHOW_FILES CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0002, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_ADD_HIDDEN_FILE CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0003, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_DEL_HIDDEN_FILE CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0004, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_ALL_RESET_HIDDEN_FILES CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0005, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SET_DRIVE CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0006, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_SET_EVENT CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0007, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_ADD_GUID CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0008, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_DEL_GUID CTL_CODE(FILE_DEVICE_UNKNOWN, HIDDEN_CMD + 0x0009, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+
+typedef struct 
+{
+	WCHAR Filename[MAXHIDDENFILENAMESIZE];
+	WCHAR Guid[GUIDCNT+1];
+}ADD_GUID_FNAME,*PADD_GUID_FNAME;
+
+typedef struct 
+{
+	WCHAR Filename[MAXHIDDENFILENAMESIZE];
+}DEL_GUID_FNAME,*PDEL_GUID_FNAME;
+
+typedef struct
+{
+	WCHAR Filename[MAXHIDDENFILENAMESIZE];
+} ADD_HIDDEN_FILE, *PADD_HIDDEN_FILE;
+
+typedef struct
+{
+	ULONG Handle;
+} HIDDEN_FILE_HANDLE, *PHIDDEN_FILE_HANDLE;
+
+typedef struct
+{
+	HIDDEN_FILE_HANDLE Handle;
+} DEL_HIDDEN_FILE, *PDEL_HIDDEN_FILE;
+
+typedef struct
+{
+	HANDLE hEvent;
+} SEND_EVENT, *PSEND_EVENT;
+
+typedef struct
+{
+	char Drive; // ASCII, ex) 'C', 'D'
+} SEND_DRIVE, *PSEND_DRIVE;
+
+#endif // _F_IFACE_H_

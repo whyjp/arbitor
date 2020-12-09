@@ -1,0 +1,353 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Maker.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "res\\그린아비터.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_START DIALOG DISCARDABLE  0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System"
+BEGIN
+    CONTROL         "위 내용에 동의 합니다.",IDC_OK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,1,149,91,16
+    CONTROL         181,IDC_STATIC,"Static",SS_BITMAP,6,0,235,108
+END
+
+IDD_CHANGE DIALOGEX 0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CONAME,83,76,165,12,ES_AUTOHSCROLL,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_SETUPNAME,83,102,165,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SAVE,83,126,165,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FIND2,250,126,25,12,0,0,HIDC_FIND2
+    EDITTEXT        IDC_PRONAME,83,150,165,12,ES_AUTOHSCROLL
+    LTEXT           "SETUP 파일 이름 :",IDC_STATIC,15,104,64,8
+    LTEXT           "회사 이름 :",IDC_STATIC,40,78,39,8
+    LTEXT           "설치 디렉토리 설정 :",IDC_STATIC,6,128,73,8
+    LTEXT           "프로그램 이름 :",IDC_STATIC,24,151,55,8
+    GROUPBOX        "당신의 프로그램의 관한 정보를 지정해 주세요.",
+                    IDC_STATIC,3,60,275,105
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,3,0,240,41
+END
+
+IDD_FINDFILE DIALOGEX 0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FINDFILE,87,76,157,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FIND2,250,76,25,12,0,0,HIDC_FIND2
+    LISTBOX         IDC_FILE,87,92,157,69,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "...",IDC_FIND,250,98,25,12,0,0,HIDC_FIND
+    PUSHBUTTON      "지움",IDC_CANCLE,250,112,25,12,0,0,HIDC_CANCLE
+    LTEXT           "설치 파일(폴더열기) :",IDC_STATIC,9,94,75,8
+    LTEXT           "설치 파일(메인파일) :",IDC_STATIC,9,77,75,8
+    GROUPBOX        "설치할 파일을 지정해 주십시오.",IDC_STATIC,3,60,275,105
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,3,0,240,41
+END
+
+IDD_FINDLSC DIALOGEX 0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LSCDIR,83,76,165,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FIND,250,76,25,12,0,0,HIDC_FIND
+    EDITTEXT        IDC_ICONDIR,83,100,164,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FIND2,250,100,25,12,0,0,HIDC_FIND2
+    EDITTEXT        IDC_UICON,83,124,165,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FIND4,250,124,25,12,0,0,HIDC_FIND4
+    EDITTEXT        IDC_VER,83,148,165,12,ES_AUTOHSCROLL
+    LTEXT           "동의서 파일 :",IDC_STATIC,27,78,47,8
+    LTEXT           "Install icon :",IDC_STATIC,33,102,41,8
+    LTEXT           "프로그램 버젼 :",IDC_STATIC,19,150,55,8
+    LTEXT           "Uninstall icon :",IDC_STATIC,24,126,50,8
+    GROUPBOX        "라이센스 정보 , 생성할 아이콘 정보 설정 및 버젼을 입력해주십시오.",
+                    IDC_STATIC,2,60,275,105
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,3,0,240,41
+END
+
+IDD_FINISH DIALOG DISCARDABLE  0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "마침을 누르면 SETUP 파일을 만듭니다.",IDC_STATIC,3,60,
+                    275,105
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,3,0,240,41
+END
+
+IDD_SAVE DIALOGEX 0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SAVEDIR,83,100,165,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FIND,250,100,25,12,0,0,HIDC_FIND
+    LTEXT           "저장할 디렉토리 :",IDC_STATIC,15,101,63,8
+    GROUPBOX        "SETUP파일이 저장될 디렉토리를 설정하십시오.",IDC_STATIC,
+                    3,60,275,105
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,3,0,240,41
+END
+
+IDD_FINDFILE1 DIALOGEX 0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_FILE,87,75,157,86,NOT LBS_NOTIFY | LBS_SORT | 
+                    LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_FIND,250,75,25,12,0,0,HIDC_FIND
+    PUSHBUTTON      "지움",IDC_CANCLE,250,90,25,12,0,0,HIDC_CANCLE
+    LTEXT           "설치 파일(추가파일) :",IDC_STATIC,9,76,75,8
+    GROUPBOX        "설치할 파일을 지정해 주십시오.",IDC_STATIC,3,60,275,105
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP,3,0,240,41
+END
+
+IDD_WELCOME DIALOG DISCARDABLE  0, 0, 280, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arbiter Install Sheild"
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_SHOCKWAVEFLASH1,
+                    "{D27CDB6E-AE6D-11CF-96B8-444553540000}",WS_TABSTOP,0,0,
+                    280,165
+END
+
+IDD_SHEET DIALOG DISCARDABLE  0, 0, 250, 133
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "시트"
+FONT 10, "System"
+BEGIN
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Maker MFC 응용 프로그램\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Maker\0"
+            VALUE "LegalCopyright", "Copyright (C) 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Maker.EXE\0"
+            VALUE "ProductName", "Maker 응용 프로그램\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WELCOME DLGINIT
+BEGIN
+    IDC_SHOCKWAVEFLASH1, 0x376, 232, 0
+0x0000, 0x0000, 0x5567, 0x5566, 0x0710, 0x0000, 0x39e1, 0x0000, 0x221b, 
+0x0000, 0x0008, 0x0002, 0x0000, 0x0000, 0x0008, 0x0000, 0x0000, 0x0008, 
+0x0000, 0x0000, 0x0008, 0x000e, 0x0000, 0x0057, 0x0069, 0x006e, 0x0064, 
+0x006f, 0x0077, 0x0000, 0x000b, 0xffff, 0x000b, 0xffff, 0x0008, 0x000a, 
+0x0000, 0x0048, 0x0069, 0x0067, 0x0068, 0x0000, 0x0008, 0x0002, 0x0000, 
+0x0000, 0x000b, 0xffff, 0x0008, 0x0000, 0x0000, 0x0008, 0x0002, 0x0000, 
+0x0000, 0x0008, 0x0010, 0x0000, 0x0053, 0x0068, 0x006f, 0x0077, 0x0041, 
+0x006c, 0x006c, 0x0000, 0x000b, 0x0000, 0x000b, 0x0000, 0x0008, 0x0002, 
+0x0000, 0x0000, 0x0008, 0x0000, 0x0000, 0x0008, 0x0002, 0x0000, 0x0000, 
+0x000d, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x000b, 0x0001, 0x000b, 0x0000, 0x0008, 0x0000, 0x0000, 0x0003, 0x0000, 
+0x0000, 0x0008, 0x0008, 0x0000, 0x0061, 0x006c, 0x006c, 0x0000, 0x0008, 
+0x000c, 0x0000, 0x0066, 0x0061, 0x006c, 0x0073, 0x0065, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "xptheme.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\arbiter1.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\Arbiter.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SHEET, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 131
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "Maker 정보(&A)..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WIZBACK              "이전으로 돌아갑니다.\n이전"
+    ID_WIZNEXT              "다음으로 넘어갑니다.\n다음"
+    ID_WIZFINISH            "종료합니다.\n마침"
+    IDS_FIND                "\n파일찾기"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_FIND                "\n찾기"
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\Maker.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

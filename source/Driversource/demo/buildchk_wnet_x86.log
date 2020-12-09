@@ -1,0 +1,49 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining c:\drvtest\driversource\demo directory for files to compile.
+Linking c:\drvtest\driversource\demo directory ********************
+'nmake.exe /nologo BUILDMSG=Stop. -i LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= 386=1'
+	link -out:.\i386\filehide_my.sys -machine:ix86 @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\nm3.tmp
+Microsoft (R) Incremental Linker Version 7.10.4035
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+-MERGE:_PAGE=PAGE 
+-MERGE:_TEXT=.text 
+-SECTION:INIT,d 
+-OPT:REF 
+-OPT:ICF 
+-IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221 
+-INCREMENTAL:NO 
+-FULLBUILD 
+/release 
+-NODEFAULTLIB 
+/WX 
+-debug 
+-debugtype:cv 
+-version:5.2 
+-osversion:5.2 
+/functionpadmin:5 
+/safeseh 
+/pdbcompress 
+-STACK:0x40000,0x1000 
+-driver 
+-base:0x10000 
+-subsystem:native,5.02 
+-entry:GsDriverEntry@8 
+-out:.\i386\filehide_my.sys 
+objchk_wnet_x86\i386\filehide.res 
+objchk_wnet_x86\i386\main.obj 
+objchk_wnet_x86\i386\hash.obj 
+objchk_wnet_x86\i386\fastio.obj 
+objchk_wnet_x86\i386\filehiddenroutine.obj 
+objchk_wnet_x86\i386\utility.obj 
+objchk_wnet_x86\i386\recognizer.obj 
+objchk_wnet_x86\i386\guid_hash.obj 
+C:\WINDDK\3790.1830\lib\wnet\i386\BufferOverflowK.lib 
+C:\WINDDK\3790.1830\lib\wnet\i386\ntoskrnl.lib 
+C:\WINDDK\3790.1830\lib\wnet\i386\hal.lib 
+C:\WINDDK\3790.1830\lib\wnet\i386\wmilib.lib 
+..\lib\ntoskrnl.lib 
+	echo Skip Binplace:
+Skip Binplace:
+
+Stop.

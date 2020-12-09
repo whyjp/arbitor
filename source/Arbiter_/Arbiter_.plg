@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Arbiter_ - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/Arbiter_.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrator.BIT-IXW5INBG59Z\바탕 화면\영주\BIT13\Arbiter_\Arbiter_.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Release/DummyProto.pdb" /machine:I386 /out:"Release/DummyProto.exe" 
+".\Release\4Svc_lib.obj"
+".\Release\Arbiter_.obj"
+".\Release\StdAfx.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP4.tmp"
+<h3>Output Window</h3>
+Compiling...
+Arbiter_.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/Arbiter_.bsc"  ".\Release\StdAfx.sbr" ".\Release\4Svc_lib.sbr" ".\Release\Arbiter_.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+DummyProto.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

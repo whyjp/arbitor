@@ -1,0 +1,7 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by Maker.rc
+//
+#define HIDC_CANCLE                     0x808303ee    // IDD_FINDFILE
+#define HIDC_FIND                       0x808303ed    // IDD_FINDFILE
+#define HIDC_FIND2                      0x808203f1    // IDD_CHANGE
+#define HIDC_FIND4                      0x808403f4    // IDD_FINDLSC

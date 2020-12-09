@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Install_HFile_Dll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP1D.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "INSTALL_HFILE_DLL_EXPORTS" /FR"Release/" /Fp"Release/Install_HFile_Dll.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrator.BIT-IXW5INBG59Z\바탕 화면\영주\Install_HFile_Dll\Install_HFile_Dll.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP1D.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP1E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/Install_HFile_Dll.pdb" /machine:I386 /out:"Release/Install_HFile_Dll.dll" /implib:"Release/Install_HFile_Dll.lib" 
+".\Release\4Svc_lib.obj"
+".\Release\bit.obj"
+".\Release\des.obj"
+".\Release\encrypt.obj"
+".\Release\Install_HFile_Dll.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.BIT\LOCALS~1\Temp\RSP1E.tmp"
+<h3>Output Window</h3>
+Compiling...
+Install_HFile_Dll.cpp
+Linking...
+   Creating library Release/Install_HFile_Dll.lib and object Release/Install_HFile_Dll.exp
+Creating command line "bscmake.exe /nologo /o"Release/Install_HFile_Dll.bsc"  ".\Release\4Svc_lib.sbr" ".\Release\bit.sbr" ".\Release\des.sbr" ".\Release\encrypt.sbr" ".\Release\Install_HFile_Dll.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Install_HFile_Dll.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,191 @@
+# Header, don't edit
+NLF v6
+# Start editing here
+# Language ID
+10332
+# Font and size - dash (-) means default
+-
+-
+# Codepage - dash (-) means ANSI code page
+-
+# RTL - anything else than RTL means LTR
+-
+# Translation by ..... (any credits should go here)
+# ^Branding
+HappyBoy Install System %s
+# ^SetupCaption Happy!
+$(^Name) Setup Happy!
+# ^UninstallCaption Happy!
+$(^Name) Uninstall Happy!
+# ^LicenseSubCaption Happy!
+: License Agreement Happy!
+# ^ComponentsSubCaption Happy!
+: Installation Options Happy!
+# ^DirSubCaption Happy!
+: Installation Folder Happy!
+# ^InstallingSubCaption Happy!
+: Installing Happy!
+# ^CompletedSubCaption Happy!
+: Completed Happy!
+# ^UnComponentsSubCaption Happy!
+: Uninstallation Options Happy!
+# ^UnDirSubCaption Happy!
+: Uninstallation Folder Happy!
+# ^ConfirmSubCaption Happy!
+: Confirmation Happy!
+# ^UninstallingSubCaption Happy!
+: Uninstalling Happy!
+# ^UnCompletedSubCaption Happy!
+: Completed Happy!
+# ^BackBtn Happy!
+< &Back Happy!
+# ^NextBtn Happy!
+&Next > Happy!
+# ^AgreeBtn Happy!
+I &Agree Happy!
+# ^AcceptBtn Happy!
+I &accept the terms in the License Agreement Happy!
+# ^DontAcceptBtn Happy!
+I &do not accept the terms in the License Agreement Happy!
+# ^InstallBtn Happy!
+&Install Happy!
+# ^UninstallBtn Happy!
+&Uninstall Happy!
+# ^CancelBtn Happy!
+Cancel Happy!
+# ^CloseBtn Happy!
+&Close Happy!
+# ^BrowseBtn Happy!
+B&rowse... Happy!
+# ^ShowDetailsBtn Happy!
+Show &details Happy!
+# ^ClickNext Happy!
+Click Next to continue. Happy!
+# ^ClickInstall Happy!
+Click Install to start the installation. Happy!
+# ^ClickUninstall Happy!
+Click Uninstall to start the uninstallation. Happy!
+# ^Name Happy!
+Name Happy!
+# ^Completed Happy!
+Completed Happy!
+# ^LicenseText Happy!
+Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, click I Agree. Happy!
+# ^LicenseTextCB Happy!
+Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, click the check box below. $_CLICK Happy!
+# ^LicenseTextRB
+Please review the license agreement before installing $(^NameDA). If you accept all terms of the agreement, select the first option below. $_CLICK Happy!
+# ^UnLicenseText Happy!
+Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, click I Agree. Happy!
+# ^UnLicenseTextCB Happy!
+Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, click the check box below. $_CLICK Happy!
+# ^UnLicenseTextRB Happy!
+Please review the license agreement before uninstalling $(^NameDA). If you accept all terms of the agreement, select the first option below. $_CLICK Happy!
+# ^Custom Happy!
+Custom Happy!
+# ^ComponentsText Happy!
+Check the components you want to install and uncheck the components you don't want to install. $_CLICK Happy!
+# ^ComponentsSubText1 Happy!
+Select the type of install: Happy!
+# ^ComponentsSubText2_NoInstTypes Happy!
+Select components to install: Happy!
+# ^ComponentsSubText2 Happy!
+Or, select the optional components you wish to install: Happy!
+# ^UnComponentsText Happy!
+Check the components you want to uninstall and uncheck the components you don't want to uninstall. $_CLICK Happy!
+# ^UnComponentsSubText1 Happy!
+Select the type of uninstall: Happy!
+# ^UnComponentsSubText2_NoInstTypes Happy!
+Select components to uninstall: Happy!
+# ^UnComponentsSubText2 Happy!
+Or, select the optional components you wish to uninstall: Happy!
+# ^DirText Happy!
+Setup will install $(^NameDA) in the following folder. To install in a different folder, click Browse and select another folder. $_CLICK Happy!
+# ^DirSubText Happy!
+Destination Folder Happy!
+# ^DirBrowseText Happy!
+Select the folder to install $(^NameDA) in: Happy!
+# ^UnDirText Happy!
+Setup will uninstall $(^NameDA) from the following folder. To uninstall from a different folder, click Browse and select another folder. $_CLICK Happy!
+# ^UnDirSubText Happy!
+"" Happy!
+# ^UnDirBrowseText Happy!
+Select the folder to uninstall $(^NameDA) from: Happy!
+# ^SpaceAvailable Happy!
+"Space available: " Happy!
+# ^SpaceRequired Happy!
+"Space required: " Happy!
+# ^UninstallingText Happy!
+$(^NameDA) will be uninstalled from the following folder. $_CLICK Happy!
+# ^UninstallingSubText Happy!
+Uninstalling from: Happy!
+# ^FileError Happy!
+Error opening file for writing: \r\n\r\n$0\r\n\r\nClick Abort to stop the installation,\r\nRetry to try again, or\r\nIgnore to skip this file. Happy!
+# ^FileError_NoIgnore Happy!
+Error opening file for writing: \r\n\r\n$0\r\n\r\nClick Retry to try again, or\r\nCancel to stop the installation. Happy!
+# ^CantWrite
+"Can't write: " Happy!
+# ^CopyFailed Happy!
+Copy failed Happy!
+# ^CopyTo Happy!
+"Copy to " Happy!
+# ^Registering Happy!
+"Registering: " Happy!
+# ^Unregistering Happy!
+"Unregistering: " Happy!
+# ^SymbolNotFound Happy!
+"Could not find symbol: " Happy!
+# ^CouldNotLoad Happy!
+"Could not load: " Happy!
+# ^CreateFolder Happy!
+"Create folder: " Happy!
+# ^CreateShortcut Happy!
+"Create shortcut: " Happy!
+# ^CreatedUninstaller Happy!
+"Created uninstaller: " Happy!
+# ^Delete Happy!
+"Delete file: " Happy!
+# ^DeleteOnReboot Happy!
+"Delete on reboot: " Happy!
+# ^ErrorCreatingShortcut Happy!
+"Error creating shortcut: " Happy!
+# ^ErrorCreating Happy!
+"Error creating: " Happy!
+# ^ErrorDecompressing Happy!
+Error decompressing data! Corrupted installer? Happy!
+# ^ErrorRegistering Happy!
+Error registering DLL Happy!
+# ^ExecShell Happy!
+"ExecShell: " Happy!
+# ^Exec Happy!
+"Execute: " Happy!
+# ^Extract Happy!
+"Extract: " Happy!
+# ^ErrorWriting Happy!
+"Extract: error writing to file " Happy!
+# ^InvalidOpcode Happy!
+Installer corrupted: invalid opcode Happy!
+# ^NoOLE Happy!
+"No OLE for: " Happy!
+# ^OutputFolder Happy!
+"Output folder: " Happy!
+# ^RemoveFolder Happy!
+"Remove folder: " Happy!
+# ^RenameOnReboot Happy!
+"Rename on reboot: " Happy!
+# ^Rename Happy!
+"Rename: " Happy!
+# ^Skipped Happy!
+"Skipped: " Happy!
+# ^CopyDetails Happy!
+Copy Details To Clipboard Happy!
+# ^LogInstall Happy!
+Log install process Happy!
+# ^Byte
+B Happy!
+# ^Kilo
+K Happy!
+# ^Mega
+M Happy!
+# ^Giga
+G Happy!

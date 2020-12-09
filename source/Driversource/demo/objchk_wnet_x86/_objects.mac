@@ -1,0 +1,52 @@
+MUI_386_OBJECTS= \
+    $(_OBJ_DIR)\i386\filehide.res
+
+386_OBJECTS= \
+    $(_OBJ_DIR)\i386\filehide.res \
+    $(_OBJ_DIR)\i386\main.obj \
+    $(_OBJ_DIR)\i386\hash.obj \
+    $(_OBJ_DIR)\i386\fastio.obj \
+    $(_OBJ_DIR)\i386\filehiddenroutine.obj \
+    $(_OBJ_DIR)\i386\utility.obj \
+    $(_OBJ_DIR)\i386\recognizer.obj \
+    $(_OBJ_DIR)\i386\guid_hash.obj
+
+MUI_IA64_OBJECTS= \
+    $(_OBJ_DIR)\ia64\filehide.res
+
+IA64_OBJECTS= \
+    $(_OBJ_DIR)\ia64\filehide.res \
+    $(_OBJ_DIR)\ia64\main.obj \
+    $(_OBJ_DIR)\ia64\hash.obj \
+    $(_OBJ_DIR)\ia64\fastio.obj \
+    $(_OBJ_DIR)\ia64\filehiddenroutine.obj \
+    $(_OBJ_DIR)\ia64\utility.obj \
+    $(_OBJ_DIR)\ia64\recognizer.obj \
+    $(_OBJ_DIR)\ia64\guid_hash.obj
+
+MUI_AMD64_OBJECTS= \
+    $(_OBJ_DIR)\amd64\filehide.res
+
+AMD64_OBJECTS= \
+    $(_OBJ_DIR)\amd64\filehide.res \
+    $(_OBJ_DIR)\amd64\main.obj \
+    $(_OBJ_DIR)\amd64\hash.obj \
+    $(_OBJ_DIR)\amd64\fastio.obj \
+    $(_OBJ_DIR)\amd64\filehiddenroutine.obj \
+    $(_OBJ_DIR)\amd64\utility.obj \
+    $(_OBJ_DIR)\amd64\recognizer.obj \
+    $(_OBJ_DIR)\amd64\guid_hash.obj
+
+MUI_ARM_OBJECTS= \
+    $(_OBJ_DIR)\arm\filehide.res
+
+ARM_OBJECTS= \
+    $(_OBJ_DIR)\arm\filehide.res \
+    $(_OBJ_DIR)\arm\main.obj \
+    $(_OBJ_DIR)\arm\hash.obj \
+    $(_OBJ_DIR)\arm\fastio.obj \
+    $(_OBJ_DIR)\arm\filehiddenroutine.obj \
+    $(_OBJ_DIR)\arm\utility.obj \
+    $(_OBJ_DIR)\arm\recognizer.obj \
+    $(_OBJ_DIR)\arm\guid_hash.obj
+

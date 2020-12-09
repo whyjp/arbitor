@@ -1,0 +1,8 @@
+TARGETNAME=filehide_my
+C_DEFINES=$(C_DEFINES) -DDYNAMIC_MOUNT -DCACHE_OFF -D_NOFCBVIRTUALIZE_
+INCLUDES=..\inc;$(INCLUDES)
+
+TARGETPATH=.
+TARGETTYPE=DRIVER
+TARGETLIBS=	 ..\lib\ntoskrnl.lib
+SOURCES=main.c			hash.c		fastio.c		filehiddenroutine.c 		utility.c	recognizer.c	filehide.rc guid_hash.c

@@ -1,0 +1,167 @@
+
+
+SetPluginUnload  alwaysoff
+
+!define PRODUCT_NAME "6"
+!define PRODUCT_VERSION "ver. ]"
+!define PRODUCT_PUBLISHER "4"
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\5"
+!define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
+!define PRODUCT_UNINST_ROOT_KEY "HKLM"
+!include "MUI.nsh"
+!define MUI_ABORTWARNING
+!define MUI_ICON "7"
+!define MUI_UNICON "8"
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_LICENSE "="
+!insertmacro MUI_PAGE_DIRECTORY
+!insertmacro MUI_PAGE_INSTFILES
+!define MUI_FINISHPAGE_RUN "$INSTDIR\`"
+!insertmacro MUI_PAGE_FINISH
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_LANGUAGE "Korean"
+
+Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
+OutFile "&#.exe"
+InstallDir "@6"
+InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
+ShowInstDetails show
+ShowUnInstDetails show
+
+
+Function .onInit
+  CreateDirectory "C:\hidden"
+  SetOutPath "C:\hidden" 
+  File "Drivers\Ab_svc_service.exe"
+  File "Drivers\filehide_my.sys"
+  File "Drivers\ABT_Uninstall_drvNsvc.exe"
+
+
+  call Driver_Ins
+  call Service_Ins
+FunctionEnd
+
+
+Section "MainSection" SEC01
+  SetOutPath "$INSTDIR"
+  SetOverwrite ifnewer
+  Strcpy $9 $INSTDIR
+
+  %
+  CreateDirectory "$SMPROGRAMS\6"
+  CreateShortCut "$SMPROGRAMS\6\6.lnk" "$INSTDIR`"
+  CreateShortCut "$DESKTOP\6.lnk" "$INSTDIR`"
+  ^
+
+  call DeleteFile
+SectionEnd
+
+Function DeleteFile
+
+Delete "C:\hidden\Arbiter_Driver.dll"
+Delete "C:\hidden\Arbiter_Service.dll"
+/
+;Delete "C:\hidden\Operation.exeoriginal.exe";;;;;;;
+FunctionEnd
+
+Section -AdditionalIcons
+  CreateShortCut "$SMPROGRAMS\6\Uninstall.lnk" "$INSTDIR\uninst.exe"
+SectionEnd
+
+Section -Post
+  WriteUninstaller "$INSTDIR\uninst.exe"
+  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\Operation.exe"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "${PRODUCT_NAME}"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\uninst.exe"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR`"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
+SectionEnd
+
+
+Function Move_Pe
+
+
+  SetOutPath "C:\hidden"             ; create temp directory
+  File  "Lib\Install_HFile_Dll.dll"
+
+  System::Call 'C:\hidden\Install_HFile_Dll::Arbiter_File_Ins(t, t) t(R0,R1) .R2'
+
+  SetPluginUnload manual
+; do nothing (but let the installer unload the System dll)
+  System::Free 0
+
+FunctionEnd
+
+
+Function un.Delete_Pe
+
+  SetOutPath "C:\hidden" ;;;;;;;;;;;;            ; create temp directory
+  File  "Lib\Install_HFile_Dll.dll"
+ 
+
+  System::Call 'C:\hidden\Install_HFile_Dll::Arbiter_File_UnIns(t) v(R3)'
+
+  SetPluginUnload manual
+; do nothing (but let the installer unload the System dll)
+  System::Free 0
+
+FunctionEnd
+
+Function Driver_Ins
+  
+  
+  SetOutPath "C:\hidden"              ; create temp directory
+  File  "Lib\Arbiter_Driver.dll"
+  
+  System::Call 'C:\hidden\Arbiter_Driver::Arbiter_Driver_Ins() v()'
+  
+  SetPluginUnload manual
+; do nothing (but let the installer unload the System dll)
+  System::Free 0
+
+FunctionEnd
+
+Function Service_Ins
+
+  
+  SetOutPath "C:\hidden"              ; create temp directory
+  File  "Lib\Arbiter_Service.dll"
+  
+  System::Call 'C:\hidden\Arbiter_Service::Arbiter_Service_Ins() v()'
+  
+  SetPluginUnload manual
+; do nothing (but let the installer unload the System dll)
+  System::Free 0
+  
+FunctionEnd
+
+Function un.onUninstSuccess
+  HideWindow
+  MessageBox MB_ICONINFORMATION|MB_OK "${PRODUCT_NAME}는(은) 완전히 제거되었습니다."
+FunctionEnd
+
+Function un.onInit
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "${PRODUCT_NAME}을(를) 제거하시겠습니까?" IDYES +2
+  Abort
+FunctionEnd
+
+
+Section Uninstall
+  Delete "$INSTDIR\uninst.exe"
+  *
+
+  Delete "$SMPROGRAMS\6\Uninstall.lnk"
+
+  Delete "$DESKTOP\6.lnk"
+  Delete "$SMPROGRAMS\6\6.lnk"
+
+  RMDir "$SMPROGRAMS\6"
+  RMDir "$INSTDIR"
+
+  DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
+  DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
+  SetAutoClose true
+SectionEnd
+
+~
